@@ -1,0 +1,77 @@
+/*---------------------------
+    Counters
+--------------------------*/
+.counter-item {
+    margin-bottom: 20px;
+
+    .counter {
+        font-family: $font-heading;
+        font-size: 38px;
+        line-height: 1;
+        margin-bottom: 7px;
+    }
+
+    .counter-item__desc {
+        color: $color-body;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .counter-item__icon {
+        color: $color-theme;
+        font-size: 60px;
+        line-height: 1;
+        margin-bottom: 12px;
+
+        i {
+            line-height: 1;
+        }
+    }
+}
+
+.counters-layout2 {
+    .counter {
+        color: $color-theme;
+        font-size: 60px;
+    }
+
+    .counter-item__desc {
+        font-family: $font-heading;
+        color: $color-heading;
+        font-size: 19px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+}
+
+.counter-light {
+
+    .counter-item .counter,
+    .counter-item .counter-item__desc {
+        color: $color-white;
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (max-width:992px) {
+    .counter-item {
+        .counter {
+            font-size: 25px;
+        }
+
+        .counter-item__desc {
+            font-size: 11px;
+            line-height: 14px;
+            padding-right: 0;
+        }
+    }
+
+}
+
+@media (max-width: 375px) {
+    .counter-item .counter-item__desc {
+        font-size: 10px;
+        line-height: 15px;
+    }
+}

@@ -1,0 +1,163 @@
+/*--------------------
+     Team
+---------------------*/
+.member {
+    position: relative;
+    margin-bottom: 30px;
+
+    .member__img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+
+    .member__info {
+        padding-top: 24px;
+
+        .member__name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .member__desc {
+            color: $color-theme;
+            margin-bottom: 0;
+        }
+    }
+
+    .member__hover {
+        position: absolute;
+        left: 40px;
+        bottom: -40px;
+        opacity: 0;
+        border-radius: 4px;
+        background-color: $color-theme;
+        @include prefix(transition, all .4s ease, webkit moz ms o);
+    }
+
+    .social-icons {
+        li {
+            margin-right: 0;
+
+            a {
+                padding: 13px 17px;
+                color: $color-white;
+                opacity: 0;
+                @include prefix(transition, all .3s linear, webkit moz ms o);
+                @include prefix(transition-delay, .4s, webkit moz ms o);
+
+                &:hover {
+                    color: $color-white;
+                }
+            }
+
+            &:nth-of-type(2) a {
+                @include prefix(transition-delay, .6s, webkit moz ms o);
+            }
+
+            &:nth-of-type(3) a {
+                @include prefix(transition-delay, .8s, webkit moz ms o);
+            }
+
+            &:nth-of-type(4) a {
+                @include prefix(transition-delay, 1s, webkit moz ms o);
+            }
+        }
+    }
+
+    &:hover {
+        .member__hover {
+            bottom: 0;
+            opacity: 1;
+        }
+
+        .social-icons li a {
+            opacity: 1;
+        }
+    }
+}
+
+.team-carousel {
+
+    .slick-list {
+        margin: -15px;
+    }
+
+    .slick-slide {
+        margin: 15px;
+    }
+
+    .slick-arrow {
+        top: -50px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 3px;
+        color: $color-white;
+        background-color: $color-theme;
+
+        &:hover {
+            background-color: $color-heading;
+        }
+
+        &:before {
+            font-size: 10px;
+        }
+
+        &.slick-prev {
+            width: 70px;
+            right: 45px;
+            left: auto;
+
+            &:before {
+                content: "\e900";
+                display: block;
+                @include prefix(transform, translateX(-20px), webkit moz ms o);
+            }
+
+            &:after {
+                content: "Prev";
+                color: $color-white;
+                font-size: 14px;
+                font-weight: 700;
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                @include prefix(transform, translateY(-50%), webkit moz ms o);
+            }
+        }
+
+        &.slick-next {
+            width: 32px;
+            background-color: $color-heading;
+
+            &:hover {
+                background-color: $color-theme;
+            }
+
+            &:before {
+                content: "\e901";
+            }
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .member {
+        max-width: 400px;
+        margin: 0 auto 30px;
+
+        .member__info {
+            padding-top: 15px;
+
+            .member__name {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

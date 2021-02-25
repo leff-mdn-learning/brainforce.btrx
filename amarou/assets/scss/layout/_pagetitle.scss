@@ -1,0 +1,180 @@
+/*-------------------------
+    page title 
+-------------------------*/
+.header-transparent+.page-title {
+    margin-top: -100px;
+}
+
+.pagetitle__subheading {
+    position: relative;
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-gray;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.pagetitle__heading {
+    font-size: 43px;
+    line-height: 1.3;
+    color: $color-white;
+    margin-bottom: 35px;
+}
+
+.pagetitle__desc {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-gray;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    padding-top: 125px;
+    padding-bottom: 125px;
+
+    .breadcrumb-item {
+
+        +.breadcrumb-item::before {
+            color: $color-white;
+        }
+
+        &.active {
+            color: $color-gray;
+        }
+
+        a {
+            position: relative;
+            color: $color-white;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+
+    .btn__white {
+        color: $color-dark;
+    }
+}
+
+.page-title-layout2 {
+    .pagetitle__heading {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+.page-title-layout3 {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.page-title-layout4 {
+    .pagetitle__heading {
+        font-size: 34px;
+    }
+}
+
+.page-title-layout5 {
+    padding-top: 145px;
+    padding-bottom: 145px;
+
+    .pagetitle__heading {
+        margin-bottom: 15px;
+    }
+}
+
+.page-title-layout6 {
+    .pagetitle__heading {
+        font-size: 40px;
+    }
+
+    .btn__white .icon-arrow-right {
+        background-color: $color-dark;
+    }
+}
+
+.page-title-layout7 {
+    padding-top: 145px;
+    padding-bottom: 145px;
+}
+
+.page-title-layout8 {
+    padding-top: 165px;
+    padding-bottom: 170px;
+
+    .pagetitle__heading {
+        margin-bottom: 5px;
+    }
+}
+
+.page-title-layout9 {
+    padding-top: 170px;
+    padding-bottom: 30px;
+
+    .pagetitle__heading {
+        margin-bottom: 150px;
+    }
+}
+
+.page-title-layout10 {
+    padding-top: 145px;
+    padding-bottom: 145px;
+}
+
+.page-title-layout11 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    .breadcrumb-item a,
+    .breadcrumb-item.active,
+    .breadcrumb-item+.breadcrumb-item:before {
+        color: $color-body;
+    }
+}
+
+@media (max-width:1200px) {
+    .blockquote-banner-wrapper {
+        -ms-flex-pack: start !important;
+        justify-content: flex-start !important;
+        margin-top: 30px;
+    }
+}
+
+/* Medium Size Devices */
+@include md-screens {
+    .page-title {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-title {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .pagetitle__subheading {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .pagetitle__desc {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .pagetitle__heading {
+            font-size: 30px !important;
+            margin-bottom: 20px;
+        }
+    }
+
+    .page-title-layout11 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}

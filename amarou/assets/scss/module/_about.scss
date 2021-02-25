@@ -1,0 +1,144 @@
+/*----------------------
+    About
+-----------------------*/
+.about-layout1 {
+    .counter-slider {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        padding: 40px;
+        width: 240px;
+        border-radius: 5px;
+        border: 20px solid $color-white;
+        background-color: $color-theme;
+
+        .counter-item .counter,
+        .counter-item .counter-item__icon,
+        .counter-item .counter-item__desc {
+            color: $color-white;
+        }
+
+        .slick-dots {
+            position: absolute;
+            top: -30px;
+            right: -10px;
+        }
+
+        .slick-dots li.slick-active {
+            border-color: $color-white;
+        }
+    }
+
+    .about-img img {
+        border-radius: 3px;
+    }
+}
+
+.about-layout2 {
+    .about-img-container {
+        position: relative;
+        padding-right: 30px;
+        padding-bottom: 40px;
+
+        .about-img:first-of-type {
+            padding-top: 100px;
+            padding-right: 100px;
+        }
+
+        .about-img:last-of-type {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 100px;
+            bottom: 100px;
+            z-index: 2;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 155px;
+            width: 175px;
+            height: 175px;
+            z-index: 1;
+            border-radius: 3px;
+            background-color: $color-theme;
+        }
+    }
+
+    .video-box {
+        position: absolute;
+        top: -30px;
+        left: 155px;
+        width: 175px;
+        height: 175px;
+        z-index: 3;
+        text-align: center;
+        border-radius: 3px;
+        background-color: $color-theme;
+
+        .video-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include prefix(transform, translate(-50%, -50%), webkit moz ms o);
+        }
+    }
+
+    .btn__icon {
+        min-width: 200px;
+        height: 55px;
+        line-height: 55px;
+    }
+
+    .heading__desc:first-of-type {
+        font-weight: 17px;
+        font-weight: 700;
+        color: $color-dark;
+    }
+
+    .about-img img {
+        border-radius: 3px;
+    }
+}
+
+/* Extra Large Size Screens */
+@media (min-width:1200px) {
+    .about-layout1 {
+        .about-img {
+            padding-right: 30px;
+        }
+
+        .col-xl-5 {
+            -ms-flex: 0 0 46%;
+            flex: 0 0 46%;
+            max-width: 46%;
+        }
+
+        .col-xl-7 {
+            -ms-flex: 0 0 54%;
+            flex: 0 0 54%;
+            max-width: 54%;
+        }
+    }
+
+    .about-layout2 {
+        .text-container {
+            padding-left: 30px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .about-layout1 {
+        .about-img {
+            margin-bottom: 20px;
+        }
+
+        .counter-slider {
+            bottom: 20px;
+            right: 0;
+        }
+    }
+}

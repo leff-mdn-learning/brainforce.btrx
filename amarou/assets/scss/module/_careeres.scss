@@ -1,0 +1,115 @@
+/*-----------------------
+    careers
+------------------------*/
+.careers {
+    .slick-slide {
+        margin: 15px;
+    }
+
+    .slick-list {
+        margin: -15px;
+    }
+
+    .slick-dots {
+        margin-top: 15px;
+    }
+}
+
+.job-item {
+    position: relative;
+    padding: 40px;
+    border-radius: 4px;
+    background-color: $color-white;
+    box-shadow: 0 0 12px 0 rgba(40, 40, 40, 0.08);
+    @include prefix(transition, all 0.4s ease, webkit moz ms o);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 3px;
+        height: calc(100% - 80px);
+        background-color: $color-theme;
+    }
+
+    &:hover {
+        box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.1);
+        @include prefix(transform, translateY(-2px), webkit moz ms o);
+    }
+
+    .job-item__meta {
+        margin-bottom: 30px;
+    }
+
+    .job-item__type {
+        font-size: 13px;
+        padding: 3px 10px;
+        border-radius: 3px;
+        text-transform: capitalize;
+        color: $color-white;
+        background-color: $color-theme;
+    }
+
+    .job-item__location {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
+    .job-item__title {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .job-item__desc {
+        font-size: 15px;
+    }
+
+    .btn__link {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+
+        i {
+            font-size: 10px;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            border-radius: 50%;
+            margin-right: 8px;
+            color: $color-white;
+            background-color: $color-dark;
+            @include prefix(transition, all 0.5s linear, webkit moz ms o);
+        }
+    }
+
+    &:hover .btn__link {
+        color: $color-theme;
+
+        i {
+            background-color: $color-theme;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .job-item {
+        padding: 20px;
+
+        &:before {
+            top: 20px;
+            height: calc(100% - 40px);
+        }
+
+        .job-item__meta {
+            margin-bottom: 20px;
+        }
+
+        .job-item__title {
+            margin-bottom: 10px;
+        }
+    }
+}

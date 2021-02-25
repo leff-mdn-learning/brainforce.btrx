@@ -1,0 +1,102 @@
+/*--------------------------
+      Video
+--------------------------*/
+.video-btn {
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    padding-left: 70px;
+    height: 70px;
+    align-items: center;
+
+    .video-btn__player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        z-index: 2;
+        color: $color-white;
+        background-color: $color-theme;
+
+        box-shadow: 0 0 0 10px #ffd2bf;
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+
+        &:hover {
+            box-shadow: 0 0 0 16px #ffd2bf;
+        }
+    }
+
+    .video-btn__title {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    &-md {
+        padding-left: 50px;
+        height: 50px;
+
+        .video-btn__player {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            box-shadow: 0 0 0 8px #ffd2bf;
+
+            &:hover {
+                box-shadow: 0 0 0 13px #ffd2bf;
+            }
+        }
+
+        .video-btn__title {
+            margin-left: 20px;
+        }
+    }
+}
+
+.video-btn-white {
+    .video-btn__player {
+        color: $color-theme;
+        background-color: $color-white !important;
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, .25);
+
+        &:hover {
+            box-shadow: 0 0 0 16px rgba(255, 255, 255, .25);
+        }
+    }
+}
+
+.video-banner {
+    position: relative;
+
+    .video-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefix(transform, translate(-50%, -50%), webkit moz ms o);
+    }
+
+    .video-btn-title {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        line-height: 1.5;
+    }
+}
+
+@include xs-screens {
+    .video-btn {
+        padding-left: 50px;
+        height: 50px;
+
+        .video-btn__player {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+}

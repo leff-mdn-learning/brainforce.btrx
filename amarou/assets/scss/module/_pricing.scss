@@ -1,0 +1,192 @@
+/*--------------------------
+        pricing
+--------------------------*/
+.pricing-panel {
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 46px 35px 50px;
+    margin-bottom: 30px;
+    background-color: $color-white;
+    @include prefix(transition, all .3s ease, webkit moz ms o);
+
+
+    &:hover {
+        @include prefix(transform, translateY(-4px), webkit moz ms o);
+    }
+
+    .pricing-panel__header {
+        -ms-flex: 0 0 23%;
+        flex: 0 0 23%;
+        max-width: 23%;
+    }
+
+    .pricing-panel__title {
+        font-family: $font-body;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 0;
+
+        span {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 17px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 200%;
+                height: 2px;
+                background-color: $color-dark;
+            }
+        }
+    }
+
+    .pricing-panel__price {
+        font-size: 40px;
+        line-height: 1;
+        color: $color-heading;
+        margin-bottom: 24px;
+    }
+
+    .pricing-panel__price-time {
+        font-size: 14px;
+        font-weight: 700;
+        display: inline-block;
+        margin-left: 4px;
+    }
+
+    .pricing-panel__body {
+        -ms-flex: 0 0 55%;
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+
+    .pricing-panel__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+
+        li {
+            color: $color-dark;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            position: relative;
+            padding-left: 27px;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 19px;
+            text-transform: capitalize;
+
+            &:after {
+                content: "\f00c";
+                font-family: FontAwesome;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $color-dark;
+            }
+        }
+    }
+
+    .pricing-panel__action {
+        -ms-flex: 0 0 22%;
+        flex: 0 0 22%;
+        max-width: 22%;
+
+        .btn {
+            min-width: 220px;
+        }
+    }
+}
+
+.pricing-panel-theme {
+    background-color: $color-theme;
+}
+
+.pricing-panel-dark {
+    background-color: $color-dark;
+}
+
+.pricing-panel-light {
+    border: 2px solid $color-heading;
+}
+
+.pricing-panel-theme,
+.pricing-panel-dark {
+
+    .pricing-panel__title,
+    .pricing-panel__price,
+    .pricing-panel__list li,
+    .pricing-panel__list li::after {
+        color: $color-white;
+    }
+
+    .pricing-panel__title span:after {
+        background-color: $color-white;
+    }
+}
+
+.pricing-panel-dark .btn {
+    color: $color-dark;
+
+    .icon-arrow-right {
+        color: $color-white;
+        background-color: $color-dark;
+    }
+
+    &:hover {
+        color: $color-white;
+
+        .icon-arrow-right {
+            color: $color-theme;
+            background-color: $color-white;
+        }
+    }
+
+    &:before {
+        background-color: $color-theme !important;
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (min-width: 320px) and (max-width:992px) {
+    .pricing-panel {
+        padding: 20px;
+
+        .pricing-panel__header,
+        .pricing-panel__body,
+        .pricing-panel__action {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .pricing-panel__title {
+            margin-bottom: 15px;
+
+            span {
+                padding-bottom: 5px;
+            }
+        }
+
+        .pricing-panel__list {
+            margin-bottom: 10px;
+
+            li {
+                font-weight: 400;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width:768px) {
+    .pricing-panel .pricing-panel__list li {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

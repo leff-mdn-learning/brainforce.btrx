@@ -1,0 +1,172 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    background-color: #161616;
+
+    .social-icons li a {
+        color: $color-theme;
+        font-size: 17px;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.footer-primary {
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget-title {
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.footer-widget-nav li a {
+    display: block;
+    position: relative;
+    color: $color-body;
+    font-size: 14px;
+    margin-bottom: 11px;
+
+    &:hover {
+        color: $color-theme;
+    }
+}
+
+.footer-widget-about {
+    .btn {
+        color: $color-theme;
+
+        .icon-arrow-right {
+            color: $color-white;
+            background-color: $color-theme;
+        }
+
+        &:hover {
+            color: $color-white;
+
+            .icon-arrow-right {
+                color: $color-dark;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.footer-widget-contact {
+    p {
+        font-size: 14px;
+    }
+}
+
+.footer-copyrights {
+    background-color: #121212;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    p {
+        font-size: 13px;
+
+        a:hover {
+            color: $color-white;
+        }
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 50%;
+    color: $color-white;
+    background-color: $color-theme;
+    overflow: hidden;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-dark;
+    }
+}
+
+#scrollTopBtn.actived {
+    right: 30px;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .footer-widget-about {
+        padding-right: 140px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .footer-widget-nav li a,
+    .footer__copyright-links li a {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .footer-primary {
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .footer-primary {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .footer-widget {
+        margin-bottom: 20px;
+    }
+
+    .footer-widget-title {
+        margin-bottom: 10px;
+    }
+
+    .footer-copyrights {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer .social-icons {
+        margin-bottom: 0;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #scrollTopBtn.actived {
+        right: 20px;
+    }
+}
